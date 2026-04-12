@@ -1,0 +1,7 @@
+[theme]
+base="dark"
+primaryColor="#4FD1C5"              # Softer turquoise (less neon, more modern)
+backgroundColor="#22272E"           # Soft dark slate (lighter than pure dark gray)
+secondaryBackgroundColor="#2F363D"  # Gentle contrast for cards/widgets
+textColor="#E6EDF3"                 # Slightly brighter text for readability
+font="sans serif"                   # Clean modern UI
