@@ -80,6 +80,34 @@ def build_ui():
         "Wearing_Lipstick": ["<NO_LIPSTICK>", "<LIPSTICK>"],
         "Young": ["<OLD>", "<YOUNG>"]
     }
+    DEFAULT_FACE = {
+        "Attractive": "<ATTRACTIVE>",
+        "Bags_Under_Eyes": "<NO_EYE_BAGS>",
+        "Bald": "<NOT_BALD>",
+        "Bangs": "<NO_BANGS>",
+        "Big_Lips": "<SMALL_LIPS>",
+        "Big_Nose": "<SMALL_NOSE>",
+        "Black_Hair": "<BLACK_HAIR>",
+        "Blond_Hair": "<NOT_BLOND_HAIR>",
+        "Brown_Hair": "<NOT_BROWN_HAIR>",
+        "Blurry": "<CLEAR_IMAGE>",
+        "Eyeglasses": "<NO_GLASSES>",
+        "Gray_Hair": "<NO_GRAY_HAIR>",
+        "Heavy_Makeup": "<LIGHT_MAKEUP>",
+        "High_Cheekbones": "<HIGH_CHEEKBONES>",
+        "Male": "<MALE>",
+        "Mouth_Slightly_Open": "<MOUTH_CLOSED>",
+        "Mustache": "<NO_MUSTACHE>",
+        "Narrow_Eyes": "<WIDE_EYES>",
+        "No_Beard": "<BEARD>",
+        "Oval_Face": "<OVAL_FACE>",
+        "Pointy_Nose": "<ROUND_NOSE>",
+        "Smiling": "<SMILING>",
+        "Straight_Hair": "<STRAIGHT_HAIR>",
+        "Wavy_Hair": "<NOT_WAVY_HAIR>",
+        "Wearing_Lipstick": "<NO_LIPSTICK>",
+        "Young": "<YOUNG>"
+    }
 
     # ======================
     # Layout: 2 Columns
@@ -120,12 +148,23 @@ def build_ui():
         selected_features = []
         for i, (attr, options) in enumerate(FACE_ATTRIBUTES.items()):
             with cols[i % 3]:
+                default_val = DEFAULT_FACE.get(attr, options[0])
+
                 choice = st.selectbox(
                     clean_tag_to_visualize(attr),
                     options,
+                    index=options.index(default_val),
                     key=attr
                 )
+
                 selected_features.append(choice)
+
+        choice = st.selectbox(
+            clean_tag_to_visualize(attr),
+            options,
+            index=options.index(default_val),
+            key=attr
+        )
 
     with right_col:
         # Loading resources
