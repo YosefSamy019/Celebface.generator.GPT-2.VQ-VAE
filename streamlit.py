@@ -187,13 +187,6 @@ def build_ui():
 
                 selected_features.append(choice)
 
-        choice = st.selectbox(
-            clean_tag_to_visualize(attr),
-            options,
-            index=options.index(default_val),
-            key=attr
-        )
-
     with right_col:
         # Loading resources
         load_resources()
