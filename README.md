@@ -8,7 +8,7 @@ This project builds a **full generative pipeline for human faces** using:
 
 👉 Try the demo:
 
-* 🌐 [Streamlit](https://apppy-spavstukx76ynrmdkxruhy.streamlit.app/)
+* 🌐 Streamlit: [Streamlit](https://apppy-spavstukx76ynrmdkxruhy.streamlit.app/)
 * 🤗 Model: [Hugging Face GPT-2 Finetuned](https://huggingface.co/yosef-samy019/gpt-face-celeb-generator)
 
 ---
@@ -343,6 +343,13 @@ Codes → embeddings → decoder → image
 Try it yourself:
 
 👉 [https://apppy-spavstukx76ynrmdkxruhy.streamlit.app/](https://apppy-spavstukx76ynrmdkxruhy.streamlit.app/)
+
+![img_19.png](img_19.png)
+![img_20.png](img_20.png)
+![img_21.png](img_21.png)
+![img_22.png](img_22.png)
+![img_23.png](img_23.png)
+![img_24.png](img_24.png)
 
 ---
 
